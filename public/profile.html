@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>My Profile - NutakuClone</title>
+  <link rel="stylesheet" href="./styles/style.css">
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="logo">
+      <h1 style="color:#ff007a;">NutakuClone</h1>
+    </div>
+    <div class="nav-links">
+      <a href="index.html" class="btn">Home</a>
+      <a href="logout.html" class="btn" style="background:#666;">Logout</a>
+    </div>
+  </nav>
+
+  <!-- Profile Section -->
+  <section class="container" style="margin-top:60px; max-width:600px;">
+    <h2 style="text-align:center; margin-bottom:30px;">My Profile</h2>
+
+    <div class="card" style="padding:30px;">
+      <div style="text-align:center;">
+        <img src="./images/profile-placeholder.png" alt="Profile Picture" style="width:120px; height:120px; border-radius:50%; object-fit:cover; margin-bottom:20px;">
+        <h3>Username123</h3>
+        <p style="color:#666; font-size:14px;">user@example.com</p>
+      </div>
+
+      <hr style="margin:30px 0;">
+
+      <form action="/api/user/update" method="POST">
+        <label for="username">Username</label>
+        <input type="text" id="username" name="username" class="input" value="Username123">
+
+        <label for="email" style="margin-top:15px;">Email</label>
+        <input type="email" id="email" name="email" class="input" value="user@example.com">
+
+        <label for="password" style="margin-top:15px;">New Password</label>
+        <input type="password" id="password" name="password" class="input" placeholder="Leave blank if not changing">
+
+        <button type="submit" class="btn" style="width:100%; margin-top:20px;">Update Profile</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    &copy; 2025 NutakuClone. All rights reserved.
+  </footer>
+
+</body>
+</html>
